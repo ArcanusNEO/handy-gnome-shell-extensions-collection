@@ -1,4 +1,4 @@
-// Frippery Move Clock ‧ 改
+// Frippery Move Clock · 改
 // https://frippery.org/extensions
 
 import * as Main from 'resource:///org/gnome/shell/ui/main.js'
