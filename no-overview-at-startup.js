@@ -3,21 +3,21 @@
 
 import * as Main from 'resource:///org/gnome/shell/ui/main.js'
 
-const share = { _realHasOverview: Main.sessionMode.hasOverview }
+const share = {}
 
 const enable = () => {
   if (!Main.layoutManager._startingUp) {
     return
   }
-  Main.sessionMode.hasOverview = false
-  share._startup_complete = Main.layoutManager.connect('startup-complete', () => {
-    Main.sessionMode.hasOverview = share._realHasOverview
-  })
+  Main.layoutManager.connectObject(
+    'startup-complete',
+    () => Main.overview.hide(),
+    share
+  )
 }
 
 const disable = () => {
-  Main.sessionMode.hasOverview = share._realHasOverview
-  Main.layoutManager.disconnect(share._startup_complete)
+  Main.layoutManager.disconnect(share)
 }
 
 export default { enable, disable }
