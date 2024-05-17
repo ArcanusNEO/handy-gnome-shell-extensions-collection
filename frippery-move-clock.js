@@ -32,7 +32,7 @@ const disable = () => {
   // only move the clock back if it's in the right box
   if (children.indexOf(dateMenu.container) != -1) {
     rightBox.remove_child(dateMenu.container)
-    centerBox.add_actor(dateMenu.container)
+    centerBox.add_child(dateMenu.container)
   }
 }
 
