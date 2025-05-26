@@ -1,0 +1,13 @@
+{
+  "description": "Handy GNOME shell extensions collection",
+  "name": "Handy extensions collection",
+  "shell-version": [
+    "46",
+    "47",
+    "48"
+  ],
+  "url": "https://github.com/ArcanusNEO/handy-gnome-shell-extensions-collection",
+  "uuid": "handy-extensions-collection@transcliff.eu.org",
+  "version": "1.7.1"
+}
+
